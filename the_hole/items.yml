@@ -1,0 +1,9 @@
+key: 'TRIPWIRE_HOOK name:&eDemon_key lore:Used_probably_to_unlock_some_bars;&2Quest_Item'
+scroll: 'PAPER name:&bScroll_of_teleportation lore:Right-click_to_teleport;Consumes_1_diamond;&2Quest_Item'
+sword: 'DIAMOND_SWORD name:&aBlade_of_the_Dark_Knight lore:The_most_evil_sword_in_the_Universe enchants:DAMAGE_ALL:3,KNOCKBACK:1'
+armor: 'DIAMOND_CHESTPLATE name:&aDevil''s_Cage lore:Used_to_torture_damned_souls,;now_makes_great_armor enchants:PROTECTION_FIRE:3,THORNS:2'
+book: 'ENCHANTED_BOOK enchants:PROTECTION_ENVIRONMENTAL:4,THORNS:3'
+star: NETHER_STAR
+soup: MUSHROOM_SOUP
+diamond: DIAMOND
+emerald: EMERALD

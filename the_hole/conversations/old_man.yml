@@ -1,0 +1,203 @@
+quester: Old man
+first: welcome_after_hole_good,welcome_after_hole_bad,welcome_hole_finished,welcome_hole_started,welcome_scroll_got,welcome_scroll_know,welcome_first_day,welcome_first_evening,welcome_first_night,welcome_first_morning,welcome_again
+stop: 'false'
+prefix: 'The Hole'
+NPC_options:
+  welcome_first_day:
+    text:
+      en: Oh, welcome traveler! It's so rare to meet someone in these lands, especially now. Would you join me for lunch?
+    events: tag_old_man_met
+    conditions: day,!old_man_met
+    pointer: who,why,what,bye
+  welcome_first_evening:
+    text:
+      en: Oh, welcome traveler! It's so rare to meet someone in these lands, especially now. Would you join me for supper?
+    events: tag_old_man_met
+    conditions: evening,!old_man_met
+    pointer: who,why,what,bye
+  welcome_first_night:
+    text:
+      en: Oh, welcome traveler! It's so rare to meet someone in these lands, especially now. Would you join me for night snack?
+    events: tag_old_man_met
+    conditions: '!night_inv,!old_man_met'
+    pointer: who,why,what,bye
+  welcome_first_morning:
+    text:
+      en: Oh, welcome traveler! It's so rare to meet someone in these lands, especially now. Would you join me for breakfast?
+    events: tag_old_man_met
+    conditions: morning,!old_man_met
+    pointer: who,why,what,bye
+  welcome_again:
+    text:
+      en: Welcome again %player%. What do you need?
+    pointer: who,why,what,hole_again,bye
+  welcome_hole_started:
+    text:
+      en: Welcome %player%! How is it going? Did you manage to kill those deamons?
+    conditions: hole_started,!scroll_got
+    pointer: not_good
+  welcome_scroll_got:
+    text:
+      en: Welcome %player%! How is it going? Did you manage to kill those deamons?
+    conditions: scroll_got,!scroll_know
+    pointer: scroll_found
+  welcome_scroll_know:
+    text:
+      en: Welcome back %player%. Have you killed that necromancer already?
+    conditions: scroll_know,!hole_finished
+    pointer: not_good
+  welcome_hole_finished:
+    text:
+      en: Welcome back %player%. Have you killed that necromancer already? I think I heard some weird noises coming from my fishing lake...
+    conditions: hole_finished
+    pointer: hole_finished_good,hole_finished_bad
+  welcome_after_hole_good:
+    text:
+      en: Ah, %player%! You're always welcome here after what you did!
+    conditions: talked_after_hole_good
+    pointer: who,why,bye
+  welcome_after_hole_bad:
+    text:
+      en: Go away, you traitor!
+    conditions: talked_after_hole_bad
+    events: hit
+  about:
+    text:
+      en: I'm just old man now. Long time ago I was great warrior like you but this time has passed. Now I'm just sitting here, at my house and thinking what to do with that hole over there. I'm sure you saw it already.
+    pointer: why,what,bye
+  here:
+    text:
+      en: You see, I built this house with my own hands, back in the days when I could lift a tree with my bare hands. I cannot leave this place, even if it means certain death. Which wouldn't be such a bad thing in my age anyway.
+    pointer: who,what,bye
+  that:
+    text:
+      en: Ah, the hole. The Hole! It appeared out of nowhere two months ago... No, wait, it's three months already. Anyway, it appeared and the deamons started coming out.
+    pointer: what2
+  that2:
+    text:
+      en: They attacked travelers, tearing men apart, raping women and killing children without mercy. All I could do was to look through my window, unable to help.
+    pointer: what3
+  that3:
+    text:
+      en: After some time people stopped coming and monsters hid from sunlight in their Hole. I don't think this is natural. It's probably some necromancer's doing. Bloody wizards, won't leave decent people alone!
+    pointer: hole,no_hole
+  offer_hole:
+    text:
+      en: I will give you a key. I found it when some skeleton dropped it on my doormat. It's probably important. And did I mention all those plundered caravans? The goods must be there, in The Hole, am I right?
+    pointer: hole_yes,hole_no
+  no_hole:
+    text:
+      en: Well, I'm not insisting. I'm already reconciled to my fate. Come back if you change your mind.
+  hole_start:
+    text:
+      en: This is the key. I don't know if it will help you but it's better to have it that to regret. Go there and do what you can. Good luck!
+    events: start_hole
+  about_scroll:
+    text:
+      en: What? Show me. Hmm... It looks like we may have a problem. Back in the days, when I was an adventurer like you, I saw a similar scroll. It belonged to a powerful wizard. So I was right.
+    pointer: scroll_found2
+  about_scroll2:
+    text:
+      en: It's a necromancer. Fucking magicians! I can still feel his aura emanating from this scroll. It looks like this bastard is somewhere under my fishing lake! Could you go there and kill him?
+    pointer: scroll_found3
+  about_scroll3:
+    text:
+      en: You can find his lair with this teleportation scroll, you just need a diamond. A regular diamond, just like every else. Sadly I don't have any, I sold all of them long time ago. You'll have to acquire one on your own.
+    pointer: start_scroll
+  very_good:
+    text:
+      en: Great! I hope that you've got some treasure, because I still don't have anything I could give you. Oh, I can share my dinner! Here's the mushroom soup I made yesterday. Thank you for your help %player%, without you I would probably be dead now.
+    events: give_soup
+  very_bad:
+    text:
+      en: What? You traitor! How could you?! Ah, nevermind, I'm already dead. Get out!
+  pff:
+    text:
+      en: Pff!
+  not_good:
+    text:
+      en: Well, good luck out there.
+  bye:
+    text:
+      en: Good luck on your journey.
+player_options:
+  who:
+    text:
+      en: Who are you?
+    pointer: about
+  why:
+    text:
+      en: Why are you living here? Wouldn't it be better for you to live in $town_name$?
+    pointer: here
+  what:
+    text:
+      en: What is going on with that hole over there? It looks quite unusual with those black stones.
+    conditions: '!hole_know'
+    pointer: that
+  what2:
+    text:
+      en: '&eContinue...'
+    pointer: that2
+  what3:
+    text:
+      en: '&eContinue...'
+    pointer: that3
+  hole_again:
+    text:
+      en: I was thinking... What will you give me if I go to that hole and solve your problem once and for all?
+    conditions: hole_know
+    pointer: offer_hole
+  hole:
+    text:
+      en: That sounds dangerous. What will you give me if I go there and solve your problem?'
+    events: tag_hole_know
+    pointer: offer_hole
+  no_hole:
+    text:
+      en: Nah, I've seen such holes many times, nothing special. You should be able to solve this for yourself. Good bye, old man.
+    events: tag_hole_know
+    pointer: no_hole
+  hole_yes:
+    text:
+      en: Yes, you're right. In that case, time to work. This hole won't clear itseld out.
+    pointer: hole_start
+  hole_no:
+    text:
+      en: I was hoping for some kind of down payment...
+    pointer: pff
+  not_good:
+    text:
+      en: No, I didn't do anything yet, I'm still preparing.
+    pointer: not_good
+  scroll_found:
+    text:
+      en: I have found this strange scroll. It teleported me out when I was about to kill some demonic skeletons.
+    pointer: about_scroll
+  scroll_found2:
+    text:
+      en: '&eContinue...'
+    pointer: about_scroll2
+  scroll_found3:
+    text:
+      en: '&eContinue...'
+    pointer: about_scroll3
+  start_scroll:
+    text:
+      en: Alright. I hope the necromancer's treasure will reward it at least hundred times more.
+    events: obj_scroll_click_2,tag_scroll_know,entry_scroll_started
+  hole_finished_good:
+    text:
+      en: He won't bother anyone anymore.
+    conditions: be_good
+    events: tag_talked_after_hole_good
+    pointer: very_good
+  hole_finished_bad:
+    text:
+      en: No, I didn't kill him. I made a pact with evil, and now there will be even more monsters!
+    conditions: be_bad
+    events: tag_talked_after_hole_bad
+    pointer: very_bad
+  bye:
+    text:
+      en: I must go, farewell!
+    pointer: bye

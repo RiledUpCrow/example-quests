@@ -1,0 +1,91 @@
+the_hole_global_loc: objective start beginning
+entry_beginning: journal beginning
+tag_old_man_met: tag add old_man_met
+tag_hole_know: tag add hole_know
+start_hole: folder tag_hole_started,obj_hole_entrance,entry_hole_start,give_key
+tag_hole_started: tag add hole_started
+obj_hole_entrance: objective start enter_hole
+death_1: objective start death_1
+delete_obj_hole_entrance: objective delete enter_hole
+take_scroll: take scroll
+take_key: take key
+entry_hole_start: journal hole_started
+give_key: give key notify
+fall: teleport $vectors.the_fall$;135;90
+spiders: spawn $vectors.spider$ SPIDER 6 name:Spider_Bane
+obj_bars: objective start bars
+through_bars: teleport $vectors.after_bars$;0;0
+obj_chest: objective start chest
+give_scroll: give scroll notify
+give_diamond_item: give diamond
+skeletons: folder skeleton1,skeleton2,skeleton3
+skeleton1: spawn $vectors.skeleton1$ SKELETON 1 name:Skeleton_Sniper
+skeleton2: spawn $vectors.skeleton2$ SKELETON 1 name:Skeleton_Sniper
+skeleton3: spawn $vectors.skeleton3$ SKELETON 1 name:Skeleton_Sniper
+obj_scroll_click_1: objective start scroll_1
+take_diamond: take diamond
+on_tree: teleport $vectors.tree$;45;45
+tag_scroll_got: tag add scroll_got
+cancel_death_1: objective delete death_1
+entry_scroll_got: journal scroll_got
+tag_scroll_know: tag add scroll_started
+entry_scroll_started: journal scroll_started
+obj_scroll_click_2: objective start scroll_2
+death_2: objective start death_2
+delete_scroll_2: objective delete scroll_2
+through_ice: teleport $vectors.ice_entry$;90;45
+zombies: spawn $vectors.final_zombie$ ZOMBIE 5 name:Demon
+obj_chest_gold: objective start gold
+obj_chest_iron: objective start iron
+obj_chest_diamond: objective start diamond
+delete_gold: objective delete gold
+delete_iron: objective delete iron
+delete_diamond: objective delete diamond
+tag_gold: tag add gold
+tag_iron: tag add iron
+tag_diamond: tag add diamond
+cancel_death_2: objective delete death_2
+evil_conv: conversation the_evil
+tp_out: teleport $loc$;-45;0
+give_diamond: give $items.diamond$ notify conditions:diamond
+give_gold: give $items.gold$ notify conditions:gold
+give_iron: give $items.iron$ notify conditions:iron
+give_low: give $items.low$ notify
+give_high: give $items.high$ notify
+give_bonus: give $items.bonus$ notify conditions:bonus
+tag_hole_finished: tag add hole_finished
+kill: kill
+entry_evil_talked_die: journal evil_talked_die
+entry_evil_talked_kill: journal evil_talked_kill
+entry_evil_talked_ally: journal evil_talked_ally
+tag_talked_after_hole_good: tag add talked_after_hole_good
+tag_talked_after_hole_bad: tag add talked_after_hole_bad
+hit: damage 1
+give_soup: give soup
+tag_every_chest: tag add tag_every_chest
+tag_bonus: tag add bonus
+tag_good: tag add good
+tag_bad: tag add bad
+obj_click_red: objective start red
+obj_click_blu: objective start blue
+delete_red: objective delete red
+delete_blu: objective delete blue
+tag_red: tag add red
+tag_blue: tag add blue
+tp_arena: teleport $vectors.arena$;-90;0
+spawn_boss: mspawnmob $vectors.boss$ $boss$:$boss_lvl$ 1
+obj_kill_boss: objective start boss
+die_boss: objective start die_boss
+delete_die_boss: objective delete die_boss
+die_msg: 'message {en} &4The Evil Voice&f: &a&oHa! I have killed you! You will not get any treasures now. Get up and fight again, I will play with you all eternity!'
+untag_iron: tag del iron
+untag_gold: tag del gold
+untag_diamond: tag del diamond
+dead_msg: 'message {en} &4The Evil Voice&f: &a&oYou have killed me! Be cursed, mortal!'
+info_delay: folder info_msg delay:5
+info_msg: 'message {en} &4The Evil Voice&f: &a&oChoose one chest, mortal, and choose wisely!'
+fall_msg: message {en} &d*You have fallen into The Hole*
+kill_zombies: clear ZOMBIE $vectors.final_zombie$;10 name:Demon
+tag_in_zombies: tag add in_zombies
+untag_in_zombies: tag del in_zombies
+tp_out_delay: folder tp_out delay:5

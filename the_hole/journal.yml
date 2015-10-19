@@ -1,0 +1,14 @@
+beginning:
+  en: 'I have found a strange, ugly house. Not far away from it there''s also a mysterious hole surrounded by black stones. It looks quite interesting, I suppose there can be some deamons and nice loot inside. I should find out what''s going on here if I want to go there.'
+hole_started:
+  en: 'The old man living near The Hole told me that monsters coming out from there could plunder a lot of valuables. He gave me a key, which will probably be useful when exploring the caverns. I should check that Hole out if I want to be rich.'
+scroll_got:
+  en: 'I didn''t find any riches inside that Hole. Instead, I''ve got a scroll, which probably teleported me out of the dungeon. Not bad, but I was expecting something better. Maybe the old man will know something about this scroll - he was an adventurer after all.'
+scroll_started:
+  en: 'It looks like this piece of paper is in fact the necromancer''s scroll of teleportation. With it I will probably be able to locate the wizard and take all his treasure. The old man told me to use that scroll in his fishing lake - there must be a secret passage somewhere. I will need one diamond for that. Looks like magic is quite expensive.'
+evil_talked_die:
+  en: 'The necromancer killed me and I didn''t get any treause. At least killing me drained all his power and he cannot do anything without it. The evil will once again disappear from these lands.'
+evil_talked_kill:
+  en: 'I killed the necromancer. Now these lands will be free again and the people will be able to travel safely again.'
+evil_talked_ally:
+  en: 'I allied with the necromancer, receiving a lot of diamonds. The evil will once again prevail, but that''s none of my business.'

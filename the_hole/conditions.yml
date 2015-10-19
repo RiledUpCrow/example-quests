@@ -1,0 +1,29 @@
+old_man_met: tag old_man_met
+day: time 12-18
+evening: time 18-22
+night_inv: time 6-22
+morning: time 6-12
+hole_started: tag hole_started
+hole_know: tag hole_know
+holding_key: hand key
+holding_scroll: hand scroll
+gold: tag gold
+iron: tag iron
+diamond: tag diamond
+in_lake: location $vectors.lake$;5
+underwater: height $loc$
+hole_finished: tag hole_finished
+talked_after_hole_good: tag talked_after_hole_good
+talked_after_hole_bad: tag talked_after_hole_bad
+every_chest: tag every_chest
+be_good: tag good
+be_bad: tag bad
+bonus: tag bonus
+scroll_know: tag scroll_started
+scroll_got: tag scroll_got
+has_diamond: item diamond
+chose_blue: tag blue
+chose_red: tag red
+deamons_living: monsters ZOMBIE:1 $vectors.final_zombie$;5 name:Demon
+in_zombies: tag in_zombies
+is_zombies_full: party 20 in_zombies count:1

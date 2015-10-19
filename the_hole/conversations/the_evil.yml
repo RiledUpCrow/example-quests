@@ -1,0 +1,95 @@
+quester: The Evil Voice
+first: kill_you,kill_evil,gold,iron,diamond
+stop: 'true'
+prefix: 'The Hole'
+NPC_options:
+  gold:
+    text:
+      en: Ah, the golden chest! Only the noble ones choose golden chest. Do you come here to defeat me?
+    conditions: gold
+    pointer: defeat,every_chest
+  iron:
+    text:
+      en: Iron chest? A warrior, eh? Are you here to gain fame and skills?
+    conditions: iron
+    pointer: skill,every_chest
+  diamond:
+    text:
+      en: Diamond chest! Do you want to be rich, traveler?
+    conditions: diamond
+    pointer: rich,every_chest
+  disappoint:
+    text:
+      en: I am The Evil Voice! And you disappoint me. I was hoping that the one who killed my minions and almost drained my power will be someone special. You are like most mortals - foolish and greedy. What now? Will you end this and kill me?
+    pointer: kill,ally
+  trial:
+    text:
+      en: 'There are two stones on the floor: red and blue. If you want to kill me, touch the red one. Beware though, touching the blue one will instantly kill you!'
+    events: obj_click_red,obj_click_blu
+  be_ally_low:
+    text:
+      en: Yes, you could be my minion... After all, you killed all my other minions. Very well, take this treasure and go, do evil on my behalf!
+    events: give_low,entry_evil_talked_ally,tag_bad,tp_out,cancel_death_2,untag_in_zombies,take_scroll,tag_hole_finished
+  be_ally_high:
+    text:
+      en: Excellent! Take this great treasure as a down payment and go, do evil on my behalf, Dark Knight!
+    events: give_high,entry_evil_talked_ally,tag_bad,tp_out,cancel_death_2,untag_in_zombies,take_scroll,tag_hole_finished
+  defeat_offer:
+    text:
+      en: You can kill me of course, but what do you think about fighting for me? I would tell you how to defeat my opponents, even more evil than myself.
+    pointer: offer_reject,offer_accept
+  skill_offer:
+    text:
+      en: Don't you think you could achieve more with me? I have a lot of enemies, killing them would bring you great fame.
+    pointer: offer_reject,offer_accept
+  rich_offer:
+    text:
+      en: I could give you everything I have, but what do you think about joining our efforts in gathering treasures? Believe me, I know how to get rich pretty quickly.
+    pointer: offer_reject,offer_accept
+  kill_you:
+    text:
+      en: Ha! I won! I fooled you, the red stone kills everyone that touches it! Be gone, mortal! Sadly, killing you drained all its power, and it looks like I will not be able to summon more minions. Well, time to move on, find another place and start over.
+    conditions: chose_red
+    events: tag_hole_finished,take_scroll,entry_evil_talked_die,tag_good,kill
+  kill_evil:
+    text:
+      en: You knew I was lying? Well then, fight me!
+    conditions: chose_blue
+    events: tp_arena,spawn_boss,obj_kill_boss,die_boss
+player_options:
+  every_chest:
+    text:
+      en: 'I didn''t ''chose'' it, I was going to loot every chest anyway. Who are you?'
+    events: tag_every_chest
+    pointer: disappoint
+  defeat:
+    text:
+      en: Yes, defeating you is my ultimate goal. Getting rich while doing so wouldn't be a bad idea though.
+    events: tag_bonus
+    pointer: defeat_offer
+  skill:
+    text:
+      en: Yes, I wanted to become famous warrior by killing you. So, what now?
+    events: tag_bonus
+    pointer: skill_offer
+  rich:
+    text:
+      en: Gathering diamonds is what I do. Just give me everything you have and I'll be on my way.
+    events: tag_bonus
+    pointer: rich_offer
+  kill:
+    text:
+      en: Yes, it isn't a bad idea. How do I kill you then?
+    pointer: trial
+  ally:
+    text:
+      en: On the other hand... How do I get rich and evil?
+    pointer: be_ally_low
+  offer_accept:
+    text:
+      en: Maybe you're right... Fine, I can work with you.
+    pointer: be_ally_high
+  offer_reject:
+    text:
+      en: No, I won't ally with evil. I will kill you here and now! How do I do that?
+    pointer: trial
