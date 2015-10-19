@@ -21,17 +21,18 @@ an entry to the journal.
 
 1. Install **BetonQuest v1.7** or later.
 2. Install **WorldEdit 6.1** or later.
-3. Paste _the_hole_ schematic somewhere in the world.
-4. Write down coordinates where you used `//paste` command.
-5. Move the package into the _BetonQuest_ directory.
-6. Open _main.yml_ file.
-7. Edit `loc` variable to match coordinates from 4.
-8. Edit `town_name` to the name of the nearest town in your world.
-9. Optionally adjust `items` rewards (matching the ones in _items.yml_ file):
+3. Install **MythicMobs 2.0.4** or later.
+4. Paste _the_hole_ schematic somewhere in the world.
+5. Write down coordinates where you used `//paste` command.
+6. Move the package into the _BetonQuest_ directory.
+7. Open _main.yml_ file.
+8. Edit `loc` variable to match coordinates from 4.
+9. Edit `town_name` to the name of the nearest town in your world.
+10. Optionally adjust `items` rewards (matching the ones in _items.yml_ file):
     - `low` is lower reward for being evil,
     - `high` is higher reward for being evil,
     - `iron` is a reward for choosing warrior path,
     - `gold` is a reward for choosing paladin path,
     - `diamond` is a reward for choosing merchant path,
     - `bonus` is an additional reward for not being greedy.
-10. Use `/q reload` to reload the plugin.
+11. Use `/q reload` to reload the plugin.
