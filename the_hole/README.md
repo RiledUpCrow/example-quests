@@ -28,11 +28,12 @@ an entry to the journal.
 7. Open _main.yml_ file.
 8. Edit `loc` variable to match coordinates from 4.
 9. Edit `town_name` to the name of the nearest town in your world.
-10. Optionally adjust `items` rewards (matching the ones in _items.yml_ file):
+10. Edit `boss` and `boss_lvl` to the name and level of MythicMobs boss.
+11. Optionally adjust `items` rewards (matching the ones in _items.yml_ file):
     - `low` is lower reward for being evil,
     - `high` is higher reward for being evil,
     - `iron` is a reward for choosing warrior path,
     - `gold` is a reward for choosing paladin path,
     - `diamond` is a reward for choosing merchant path,
     - `bonus` is an additional reward for not being greedy.
-11. Use `/q reload` to reload the plugin.
+12. Use `/q reload` to reload the plugin.
