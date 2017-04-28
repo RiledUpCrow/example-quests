@@ -1,15 +1,15 @@
-beginning: location $loc$;15 events:entry_beginning
-enter_hole: location $vectors.the_hole$;3 events:fall,fall_msg,spiders,obj_bars,death_1
+beginning: location $loc$ 15 events:entry_beginning
+enter_hole: location $vectors.the_hole$ 3 events:fall,fall_msg,spiders,obj_bars,death_1
 death_1: die events:take_scroll,delete_obj_hole_entrance,obj_hole_entrance,death_1
-bars: action right IRON_FENCE conditions:holding_key events:through_bars,obj_chest loc:$vectors.bars$;2
-chest: action right CHEST events:give_scroll,give_diamond_item,skeletons,obj_scroll_click_1 cancel loc:$vectors.chest$;2
+bars: action right IRON_FENCE conditions:holding_key events:through_bars,obj_chest loc:$vectors.bars$ range:2
+chest: action right CHEST events:give_scroll,give_diamond_item,skeletons,obj_scroll_click_1 cancel loc:$vectors.chest$ range:2
 scroll_1: action right any conditions:holding_scroll events:take_key,take_diamond,on_tree,tag_scroll_got,cancel_death_1,entry_scroll_got cancel
 scroll_2: action right any conditions:in_lake,underwater,has_diamond,holding_scroll,!is_zombies_full events:info_delay,take_diamond,through_ice,tag_in_zombies,zombies,obj_chest_gold,obj_chest_iron,obj_chest_diamond,death_2 cancel
 death_2: die events:delete_gold,delete_iron,delete_diamond,obj_scroll_click_2,kill_zombies,untag_in_zombies
-gold: action right CHEST events:tag_gold,evil_conv,delete_iron,delete_diamond conditions:!deamons_living cancel loc:$vectors.gold$;1
-iron: action right CHEST events:tag_iron,evil_conv,delete_gold,delete_diamond conditions:!deamons_living cancel loc:$vectors.iron$;1
-diamond: action right CHEST events:tag_diamond,evil_conv,delete_iron,delete_gold conditions:!deamons_living cancel loc:$vectors.diamond$;1
-red: action left REDSTONE_BLOCK loc:$vectors.final_zombie$;3 events:tag_red,cancel_death_2,delete_blu,evil_conv,untag_in_zombies
-blue: action left LAPIS_BLOCK loc:$vectors.final_zombie$;3 events:tag_blue,cancel_death_2,delete_red,evil_conv,untag_in_zombies
+gold: action right CHEST events:tag_gold,evil_conv,delete_iron,delete_diamond conditions:!deamons_living cancel loc:$vectors.gold$ range:1
+iron: action right CHEST events:tag_iron,evil_conv,delete_gold,delete_diamond conditions:!deamons_living cancel loc:$vectors.iron$ range:1
+diamond: action right CHEST events:tag_diamond,evil_conv,delete_iron,delete_gold conditions:!deamons_living cancel loc:$vectors.diamond$ range:1
+red: action left REDSTONE_BLOCK loc:$vectors.final_zombie$ range:3 events:tag_red,cancel_death_2,delete_blu,evil_conv,untag_in_zombies
+blue: action left LAPIS_BLOCK loc:$vectors.final_zombie$ range:3 events:tag_blue,cancel_death_2,delete_red,evil_conv,untag_in_zombies
 boss: mmobkill $boss$ events:delete_die_boss,tag_hole_finished,dead_msg,take_scroll,tp_out_delay,give_gold,give_iron,give_diamond,give_bonus,tag_good,entry_evil_talked_kill
 die_boss: die cancel respawn:$vectors.arena$;-90;0 events:die_msg,untag_iron,untag_gold,untag_diamond

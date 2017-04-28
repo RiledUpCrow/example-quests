@@ -1,5 +1,5 @@
 the_hole_global_loc: objective start beginning
-entry_beginning: journal beginning
+entry_beginning: journal add beginning
 tag_old_man_met: tag add old_man_met
 tag_hole_know: tag add hole_know
 start_hole: folder tag_hole_started,obj_hole_entrance,entry_hole_start,give_key
@@ -9,7 +9,7 @@ death_1: objective start death_1
 delete_obj_hole_entrance: objective delete enter_hole
 take_scroll: take scroll
 take_key: take key
-entry_hole_start: journal hole_started
+entry_hole_start: journal add hole_started
 give_key: give key notify
 fall: teleport $vectors.the_fall$;135;90
 spiders: spawn $vectors.spider$ SPIDER 6 name:Spider_Bane
@@ -27,9 +27,9 @@ take_diamond: take diamond
 on_tree: teleport $vectors.tree$;45;45
 tag_scroll_got: tag add scroll_got
 cancel_death_1: objective delete death_1
-entry_scroll_got: journal scroll_got
+entry_scroll_got: journal add scroll_got
 tag_scroll_know: tag add scroll_started
-entry_scroll_started: journal scroll_started
+entry_scroll_started: journal add scroll_started
 obj_scroll_click_2: objective start scroll_2
 death_2: objective start death_2
 delete_scroll_2: objective delete scroll_2
@@ -55,9 +55,9 @@ give_high: give $items.high$ notify
 give_bonus: give $items.bonus$ notify conditions:bonus
 tag_hole_finished: tag add hole_finished
 kill: kill
-entry_evil_talked_die: journal evil_talked_die
-entry_evil_talked_kill: journal evil_talked_kill
-entry_evil_talked_ally: journal evil_talked_ally
+entry_evil_talked_die: journal add evil_talked_die
+entry_evil_talked_kill: journal add evil_talked_kill
+entry_evil_talked_ally: journal add evil_talked_ally
 tag_talked_after_hole_good: tag add talked_after_hole_good
 tag_talked_after_hole_bad: tag add talked_after_hole_bad
 hit: damage 1
@@ -77,15 +77,17 @@ spawn_boss: mspawnmob $vectors.boss$ $boss$:$boss_lvl$ 1
 obj_kill_boss: objective start boss
 die_boss: objective start die_boss
 delete_die_boss: objective delete die_boss
-die_msg: 'message {en} &4The Evil Voice&f: &a&oHa! I have killed you! You will not get any treasures now. Get up and fight again, I will play with you all eternity!'
+die_msg: 'message {en} &4The Evil Voice&f: &a&oHa! I have killed you! You will not
+  get any treasures now. Get up and fight again, I will play with you all eternity!'
 untag_iron: tag del iron
 untag_gold: tag del gold
 untag_diamond: tag del diamond
 dead_msg: 'message {en} &4The Evil Voice&f: &a&oYou have killed me! Be cursed, mortal!'
 info_delay: folder info_msg delay:5
-info_msg: 'message {en} &4The Evil Voice&f: &a&oChoose one chest, mortal, and choose wisely!'
+info_msg: 'message {en} &4The Evil Voice&f: &a&oChoose one chest, mortal, and choose
+  wisely!'
 fall_msg: message {en} &d*You have fallen into The Hole*
-kill_zombies: clear ZOMBIE $vectors.final_zombie$;10 name:Demon
+kill_zombies: clear ZOMBIE $vectors.final_zombie$ 10 name:Demon
 tag_in_zombies: tag add in_zombies
 untag_in_zombies: tag del in_zombies
 tp_out_delay: folder tp_out delay:5

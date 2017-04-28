@@ -10,7 +10,7 @@ holding_scroll: hand scroll
 gold: tag gold
 iron: tag iron
 diamond: tag diamond
-in_lake: location $vectors.lake$;5
+in_lake: location $vectors.lake$ 5
 underwater: height $loc$
 hole_finished: tag hole_finished
 talked_after_hole_good: tag talked_after_hole_good
@@ -24,6 +24,6 @@ scroll_got: tag scroll_got
 has_diamond: item diamond
 chose_blue: tag blue
 chose_red: tag red
-deamons_living: monsters ZOMBIE:1 $vectors.final_zombie$;5 name:Demon
+deamons_living: monsters ZOMBIE:1 $vectors.final_zombie$ 5 name:Demon
 in_zombies: tag in_zombies
 is_zombies_full: party 20 in_zombies count:1

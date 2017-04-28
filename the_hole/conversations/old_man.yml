@@ -1,7 +1,7 @@
 quester: Old man
 first: welcome_after_hole_good,welcome_after_hole_bad,welcome_hole_finished,welcome_hole_started,welcome_scroll_got,welcome_scroll_know,welcome_first_day,welcome_first_evening,welcome_first_night,welcome_first_morning,welcome_again
 stop: 'false'
-prefix: 'The Hole'
+prefix: The Hole
 NPC_options:
   welcome_first_day:
     text:

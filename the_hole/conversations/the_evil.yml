@@ -1,7 +1,7 @@
 quester: The Evil Voice
 first: kill_you,kill_evil,gold,iron,diamond
 stop: 'true'
-prefix: 'The Hole'
+prefix: The Hole
 NPC_options:
   gold:
     text:
@@ -24,7 +24,9 @@ NPC_options:
     pointer: kill,ally
   trial:
     text:
-      en: 'There are two stones on the floor: red and blue. If you want to kill me, touch the red one. Beware though, touching the blue one will instantly kill you!'
+      en: 'There are two stones on the floor: red and blue. If you want to kill me,
+        touch the red one. Beware though, touching the blue one will instantly kill
+        you!'
     events: obj_click_red,obj_click_blu
   be_ally_low:
     text:
@@ -59,7 +61,7 @@ NPC_options:
 player_options:
   every_chest:
     text:
-      en: 'I didn''t ''chose'' it, I was going to loot every chest anyway. Who are you?'
+      en: I didn't 'chose' it, I was going to loot every chest anyway. Who are you?
     events: tag_every_chest
     pointer: disappoint
   defeat:

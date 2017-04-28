@@ -6,24 +6,24 @@ variables:
   boss: SkeletalKnight
   boss_lvl: '1'
   vectors:
-    the_hole: $loc$->(-6.5,0,-6.5)
-    the_fall: $loc$->(-6.5,-3,-6.5)
-    bars: $loc$->(1.5,-5,2.5)
-    after_bars: $loc$->(1.5,-6,3.5)
-    chest: $loc$->(4.5,-10,13.5)
-    tree: $loc$->(9.5,3,2.5)
-    lake: $loc$->(8.5,-1,-6.5)
-    ice_entry: $loc$->(3.5,-4,-5.5)
-    final_zombie: $loc$->(0.5,-7,-10.5)
-    diamond: $loc$->(3.5,-7,-10.5)
-    gold: $loc$->(-2.5,-7,-10.5)
-    iron: $loc$->(0.5,-7,-12.5)
-    spider: $loc$->(0.5,-10,-1.5)
-    skeleton1: $loc$->(6.5,-9,6.5)
-    skeleton2: $loc$->(4.5,-9,6.5)
-    skeleton3: $loc$->(2.5,-9,6.5)
-    arena: $loc$->(-12.5,-10,8.5)
-    boss: $loc$->(-4.5,-10,8.5)
+    the_hole: $loc$->(-6.5;0;-6.5)
+    the_fall: $loc$->(-6.5;-3;-6.5)
+    bars: $loc$->(1.5;-5;2.5)
+    after_bars: $loc$->(1.5;-6;3.5)
+    chest: $loc$->(4.5;-10;13.5)
+    tree: $loc$->(9.5;3;2.5)
+    lake: $loc$->(8.5;-1;-6.5)
+    ice_entry: $loc$->(3.5;-4;-5.5)
+    final_zombie: $loc$->(0.5;-7;-10.5)
+    diamond: $loc$->(3.5;-7;-10.5)
+    gold: $loc$->(-2.5;-7;-10.5)
+    iron: $loc$->(0.5;-7;-12.5)
+    spider: $loc$->(0.5;-10;-1.5)
+    skeleton1: $loc$->(6.5;-9;6.5)
+    skeleton2: $loc$->(4.5;-9;6.5)
+    skeleton3: $loc$->(2.5;-9;6.5)
+    arena: $loc$->(-12.5;-10;8.5)
+    boss: $loc$->(-4.5;-10;8.5)
   items:
     low: diamond:5
     high: diamond:10
@@ -34,6 +34,11 @@ variables:
 npcs:
   Old man: old_man
 cancel:
-  quest: en_name:&2The_Hole conditions:hole_started,!hole_finished tags:hole_started,hole_know,scroll_got,scroll_started,gold,iron,diamond,bonus,tag_every_chest,red,blue,in_zombies journal:hole_started,scroll_got,scroll_started objectives:enter_hole,death_1,bars,chest,scroll_1,scroll_2,death_2,gold,iron,diamond,red,blue,boss,die_boss events:take_key,take_scroll,tp_out
+  quest:
+    events: take_key,take_scroll,tp_out
+    conditions: hole_started,!hole_finished
+    tags: hole_started,hole_know,scroll_got,scroll_started,gold,iron,diamond,bonus,tag_every_chest,red,blue,in_zombies
+    objectives: enter_hole,death_1,bars,chest,scroll_1,scroll_2,death_2,gold,iron,diamond,red,blue,boss,die_boss
+    journal: hole_started,scroll_got,scroll_started
 global_locations: beginning
-tag_point_prefix: 'true'
+enabled: false

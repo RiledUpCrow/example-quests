@@ -19,9 +19,9 @@ an entry to the journal.
 
 ## Installation
 
-1. Install **BetonQuest v1.7** or later.
+1. Install **BetonQuest 1.9** or later.
 2. Install **WorldEdit 6.1** or later.
-3. Install **MythicMobs 2.0.4** or later.
+3. Install **MythicMobs 2.0** or later.
 4. Paste _the_hole_ schematic somewhere in the world.
 5. Write down coordinates where you used `//paste` command.
 6. Move the package into the _BetonQuest_ directory.
